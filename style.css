@@ -1,0 +1,79 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Center the game container */
+.game-container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    text-align: center;
+    width: 400px; /* Increased width */
+}
+
+/* Title styling */
+.game-container h1 {
+    font-size: 32px; /* Increased font size */
+    margin-bottom: 25px;
+    color: #4facfe;
+}
+
+/* Button styling */
+.buttons button {
+    background: #4facfe;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 25px; /* Increased padding */
+    margin: 15px; /* Increased margin */
+    font-size: 18px; /* Increased font size */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+    background: #00c6ff;
+}
+
+/* Results section styling */
+.results, .counters {
+    margin-top: 25px;
+}
+
+.results p, .counters p {
+    font-size: 18px; /* Increased font size */
+    margin: 10px 0;
+}
+
+.results span, .counters span {
+    font-weight: bold;
+    color: #4facfe;
+}
+
+/* Add spacing between sections */
+.counters {
+    margin-top: 35px;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+    .game-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
