@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const headsBtn = document.getElementById('heads-btn');
     const tailsBtn = document.getElementById('tails-btn');
+    const clearBtn = document.getElementById('clear-btn'); 
     const playerGuessSpan = document.getElementById('player-guess');
     const coinResultSpan = document.getElementById('coin-result');
     const gameResultSpan = document.getElementById('game-result');
@@ -34,6 +35,21 @@ document.addEventListener('DOMContentLoaded', function() {
         lossesSpan.textContent = losses;
     }
 
+    function clearResults() {
+        // Reset counters
+        attempts = 0;
+        wins = 0;
+        losses = 0;
+
+        // Reset UI
+        playerGuessSpan.textContent = '-';
+        coinResultSpan.textContent = '-';
+        gameResultSpan.textContent = '-';
+        attemptsSpan.textContent = '0';
+        winsSpan.textContent = '0';
+        lossesSpan.textContent = '0';
+    }
+
     headsBtn.addEventListener('click', function() {
         flipCoin('Heads');
     });
@@ -41,4 +57,6 @@ document.addEventListener('DOMContentLoaded', function() {
     tailsBtn.addEventListener('click', function() {
         flipCoin('Tails');
     });
+
+    clearBtn.addEventListener('click', clearResults); 
 });
